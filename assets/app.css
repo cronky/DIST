@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@tailwind base;
+
+@layer base {
+	@font-face {
+	  font-family: TWKEverett;
+	  font-weight: 400;
+	  src: url(https://admin.thegreenwebfoundation.org/static/fonts/twkeverett-regular.woff2) format("woff2");
+	}
+	@font-face {
+	  font-family: TWKEverett;
+	  font-weight: 400;
+	  font-style: italic;
+	  src: url(https://admin.thegreenwebfoundation.org/static/fonts/twkeverett-regularitalic.woff2) format("woff2");
+	}
+	html {
+		@apply text-neutral-900;
+		@apply font-normal;
+	}
+	*,
+	::before,
+	::after {
+		@apply border-black;
+	}
+	a {
+		@apply underline;
+	}
+	a:hover {
+		@apply no-underline;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		@apply font-bold;
+	}
+	summary {
+		cursor: pointer;
+	}
+}
