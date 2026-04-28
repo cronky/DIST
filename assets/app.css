@@ -1,41 +1,141 @@
-@import 'tailwindcss' layer(base);
-@import 'tailwindcss/theme' layer(theme);
-@import 'tailwindcss/preflight' layer(base);
+@import "tailwindcss";
 
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/forms";
+@source "./_drafts/**/*.html";
+@source "./_includes/**/*.html";
+@source "./_layouts/**/*.html";
+@source "./_posts/*.md";
+@source "./_posts/*.markdown";
+@source "./*.md";
+@source "./*.markdown";
+@source "./*.html";
+
+@theme {
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-med: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.75rem;
+    --text-4xl: 2rem;
+    --text-5xl: 2.25rem;
+    --text-6xl: 2.5rem;
+    --text-disp-sm: 2.75rem;
+    --text-disp-lg: 3.25rem;
+
+    --color-green-50: #F0FDF0;
+    --color-green-100: #DCFCDC;
+    --color-green-200: #BBF7BB;
+    --color-green-300: #86EF86;
+    --color-green-400: #4ADE4A;
+    --color-green-500: #00FF00;
+    --color-green-600: #16A316;
+    --color-green-700: #158015;
+    --color-green-800: #166516;
+    --color-green-900: #145314;
+    --color-green: #00FF00;
+
+    --color-purple-50: #FBF2FE;
+    --color-purple-100: #F7E2FE;
+    --color-purple-200: #F1CAFE;
+    --color-purple-300: #E6A5FC;
+    --color-purple-400: #D671F8;
+    --color-purple-500: #CB2CFF;
+    --color-purple-600: #AE26DC;
+    --color-purple-700: #921CB9;
+    --color-purple-800: #7A1B99;
+    --color-purple-900: #671D7F;
+    --color-purple: #CB2CFF;
+
+    --color-blue-50: #EEF5FF;
+    --color-blue-100: #E0ECFF;
+    --color-blue-200: #C7DDFE;
+    --color-blue-300: #A5C8FC;
+    --color-blue-400: #0066FF;
+    --color-blue-500: #0066FF;
+    --color-blue-600: #4686E5;
+    --color-blue-700: #3872CA;
+    --color-blue-800: #305EA3;
+    --color-blue-900: #2E4F81;
+    --color-blue: #0066FF;
+
+    --font-sans: "TWKEverett", sans-serif;
+    --font-serif: "TWKEverett", serif;
+}
 
 @layer base {
-	@font-face {
-	  font-family: TWKEverett;
-	  font-weight: 400;
-	  src: url(https://admin.thegreenwebfoundation.org/static/fonts/twkeverett-regular.woff2) format("woff2");
-	}
-	@font-face {
-	  font-family: TWKEverett;
-	  font-weight: 400;
-	  font-style: italic;
-	  src: url(https://admin.thegreenwebfoundation.org/static/fonts/twkeverett-regularitalic.woff2) format("woff2");
-	}
-	html {
-		@apply text-neutral-900;
-		@apply font-normal;
-	}
-	*,
-	::before,
-	::after {
-		@apply border-black;
-	}
-	a {
-		@apply underline;
-	}
-	a:hover {
-		@apply no-underline;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		@apply font-bold;
-	}
-	summary {
-		cursor: pointer;
-	}
+    @font-face {
+        font-family: TWKEverett;
+        font-weight: 400;
+        src: url(https://admin.thegreenwebfoundation.org/static/fonts/twkeverett-regular.woff2)
+            format("woff2");
+    }
+    @font-face {
+        font-family: TWKEverett;
+        font-weight: 400;
+        font-style: italic;
+        src: url(https://admin.thegreenwebfoundation.org/static/fonts/twkeverett-regularitalic.woff2)
+            format("woff2");
+    }
+    html {
+        @apply text-neutral-900;
+        @apply font-normal;
+    }
+    *,
+    ::before,
+    ::after {
+        @apply border-black;
+    }
+    a {
+        @apply underline;
+    }
+    a:hover {
+        @apply no-underline;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold;
+    }
+    summary {
+        cursor: pointer;
+    }
+}
+
+@layer components {
+    .prose {
+        --tw-prose-body: var(--color-neutral-900);
+        --tw-prose-headings: var(--color-neutral-900);
+    }
+    .prose h1 {
+        text-transform: uppercase;
+        font-size: var(--text-6xl);
+    }
+    .prose h2 {
+        font-size: var(--text-5xl);
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .prose h3 {
+        font-size: var(--text-4xl);
+        border-bottom-width: 1px;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .prose h4 {
+        font-size: var(--text-3xl);
+    }
+    .prose h5 {
+        font-size: var(--text-2xl);
+        font-weight: 400;
+    }
+    .prose code::before,
+    .prose code::after {
+        content: "";
+    }
 }
