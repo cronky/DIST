@@ -1,8 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss' layer(base);
+@import 'tailwindcss/theme' layer(theme);
+@import 'tailwindcss/preflight' layer(base);
+
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
-
-@tailwind base;
 
 @layer base {
 	@font-face {
