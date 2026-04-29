@@ -15,8 +15,8 @@ baseurl: ''
 url: https://dist.greenweb.org
 theme: minima
 plugins:
-  - jekyll-feed
-  - jekyll-tailwind
+- jekyll-feed
+- jekyll-tailwind
 tailwind:
   input: assets/app.css
   minify: true
