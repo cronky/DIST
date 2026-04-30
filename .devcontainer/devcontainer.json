@@ -16,7 +16,7 @@
 	// "forwardPorts": [],
 
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "jekyll --version && bundle install"
+	// "postCreateCommand": ""
 
 	// Configure tool-specific properties.
 	// "customizations": {},
