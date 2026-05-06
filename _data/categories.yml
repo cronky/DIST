@@ -1,6 +1,6 @@
-- name: Upstream Emissions
+- name: Upstream Impacts
   link: /categories/upstream
-- name: Operational Emissions
+- name: Operational Impacts
   link: /categories/operational
-- name: Downstream Emissions
+- name: Downstream Impacts
   link: /categories/downstream

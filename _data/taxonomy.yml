@@ -21,7 +21,7 @@
 # - noLink: Provides an overide to prevent any navigation to a page. Renders the component in a <div> instead of an <a>.
 
 CatU:
-  description: Upstream emissions relating to the embodied impacts of hardware and the development of software.
+  description: Upstream impacts relating to the embodied impacts of hardware and the development of software.
 
 CatUSoftware:
   id: CatUSoftware
@@ -64,7 +64,7 @@ CatUServerHardware:
   noLink: false
 
 OperationalEmissions:
-  description: Operational emissions are associated to the running of business IT functions and systems. Each operational function may have a hybrid of IT infrastructure across direct and/or indirect emissions.
+  description: Operational impacts are associated with the running of business IT functions and systems. Each operational function may have a hybrid of IT infrastructure across direct and/or indirect impacts.
 
 CatO:
   description: Direct running costs that are attributed to the electricity powering servers, networks and devices.

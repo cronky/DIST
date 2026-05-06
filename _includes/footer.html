@@ -18,6 +18,15 @@
         {%- endif %}
         </div>
         <div class="footer-col">
+
+          <div class="text-right not-prose">
+            {% include DIST/license.html %}
+          </div>
+          
+          <div class="">
+            {% include DIST/attribution.html %}
+          </div>
+          
           <p>
           {% unless site.minima.hide_site_feed_link %}
               <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" target="_blank" title="Subscribe to syndication feed">
