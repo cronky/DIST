@@ -9,17 +9,10 @@ To run a copy locally for editing, development and previewing, you will need to 
 
 To get started, check out this repository and run:
 
-```
-bundle install # to install ruby dependencies
-npm install # to install nodejs dependencies
-```
-
-You can then run:
-
-```
-bundle exec jekyll serve
-```
-
+* `bundle install` - to install ruby dependencies. 
+* `npm install` - to install nodejs dependencies 
+*  `bundle exec jekyll serve` - to build the site and make it available on a local server 
+* OR `bundle exec jekyll serve --livereload` to automatically refresh the page with each change you make to the source file
 
 
 ... which will make a local copy of the site available at https://localhost:4000.
