@@ -1,7 +1,8 @@
+@layer theme, base, components, utilities;
+
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight.css" layer(base);
+
 @source "./_drafts/**/*.html";
 @source "./_includes/**/*.html";
 @source "./_layouts/**/*.html";
@@ -10,6 +11,8 @@
 @source "./*.md";
 @source "./*.markdown";
 @source "./*.html";
+
+@plugin "@tailwindcss/typography";
 
 @theme {
     --text-xs: 0.75rem;
@@ -61,6 +64,31 @@
     --color-blue-900: #2E4F81;
     --color-blue: #0066FF;
 
+    --color-orange-50: #FFF9EB;
+    --color-orange-100: #FEEDC7;
+    --color-orange-200: #FDD98A;
+    --color-orange-300: #FCC54D;
+    --color-orange-400: #FBB724;
+    --color-orange-500: #FAAA00;
+    --color-orange-600: #D99606;
+    --color-orange-700: #B47E09;
+    --color-orange-800: #92680E;
+    --color-orange-900: #78570F;
+    --color-orange: #FAAA00;
+
+    --color-charcoal-50: #f6f6f6;
+    --color-charcoal-100: #e7e7e7;
+    --color-charcoal-200: #d1d1d1;
+    --color-charcoal-300: #b0b0b0;
+    --color-charcoal-400: #888888;
+    --color-charcoal-500: #6d6d6d;
+    --color-charcoal-600: #5d5d5d;
+    --color-charcoal-700: #4f4f4f;
+    --color-charcoal-800: #454545;
+    --color-charcoal-900: #3d3d3d;
+    --color-charcoal-950: #252525;
+    --color-charcoal: #252525;    
+
     --font-sans: "TWKEverett", sans-serif;
     --font-serif: "TWKEverett", serif;
 }
@@ -103,16 +131,6 @@
         @apply font-bold;
     }
 
-    summary {
-        cursor: pointer;
-    }
-}
-
-@layer components {
-    .prose {
-        --tw-prose-body: var(--color-neutral-900);
-        --tw-prose-headings: var(--color-neutral-900);
-    }
     h1 {
         text-transform: uppercase;
         font-size: var(--text-6xl);
@@ -137,6 +155,17 @@
         font-size: var(--text-2xl);
         font-weight: 400;
     }
+    summary {
+        cursor: pointer;
+    }
+}
+
+@layer components {
+    .prose {
+        --tw-prose-body: var(--color-neutral-900);
+        --tw-prose-headings: var(--color-neutral-900);
+    }
+
     .prose code::before,
     .prose code::after {
         content: "";
@@ -197,3 +226,54 @@
 .post-content p {
   @apply mb-3;
 }
+
+
+/* CATEGORY U */
+.cat-u {
+@apply bg-blue dark:bg-blue-700 text-white;
+}
+.cat-u-body {
+@apply bg-blue-200 dark:bg-blue-600 text-charcoal dark:text-white;
+}
+.cat-u-arrow-right {
+@apply border-t-[2rem] border-l-[2rem] border-b-[2rem] border-transparent border-l-blue dark:border-l-blue-700;
+}
+.cat-u-arrow-down {
+@apply border-t-[2rem] border-l-[6rem] border-r-[6rem] border-transparent border-t-blue dark:border-t-blue-700;
+}
+
+
+/* CATEGORY O */
+.cat-o {
+@apply bg-purple-600 dark:bg-purple-800 text-white;
+}
+.cat-o-body {
+@apply bg-purple-300 dark:bg-purple-700 text-charcoal dark:text-white;
+}
+.cat-o-arrow-right {
+@apply border-t-[2rem] border-l-[2rem] border-b-[2rem] border-transparent border-l-purple-600 dark:border-l-purple-800;
+}
+.cat-o-arrow-down {
+@apply border-t-[2rem] border-l-[6rem] border-r-[6rem] border-transparent border-t-purple-600 dark:border-t-purple-800;
+}
+
+
+/* CATEGORY C */
+.cat-c {
+@apply bg-purple-800 dark:bg-purple-950 text-white;
+}
+
+/* CATEGORY G */
+.cat-g {
+@apply bg-charcoal-800 dark:bg-charcoal-950 text-white;
+}
+
+
+/* CATEGORY D */
+.cat-d {
+@apply bg-orange-500 dark:bg-orange-800 text-white;
+}
+.cat-d-body {
+@apply bg-orange-200 dark:bg-orange-700 text-charcoal dark:text-white;
+}
+

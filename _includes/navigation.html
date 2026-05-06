@@ -1,0 +1,53 @@
+<div class="container mx-auto w-full flex pb-4 sm:pb-0 items-center sm:items-end justify-start">
+
+  <!-- LOGO -->
+  <a class="flex items-center space-x-4 no-underline" aria-label="DIST home" href="/">
+    <img style="height:50px" src="/assets/images/GWF-icon-plant--orange.svg">
+    <span class="text-lg hover:font-bold focus:outline-none focus-visible:ring focus:ring-blue">{{ site.title | escape }}</span>
+  </a>
+
+  <button id="menu-button" type="button" class="sm:hidden w-full text-right" aria-expanded="false" aria-label="open menu">
+    <svg id="menu-icon" aria-hidden="true" class="size-8 inline-block fill-cambridge-50 hover:fill-cambridge-400"><use href="/assets/images/icons.svg#menu"></use></svg>
+    <svg id="close-icon" aria-hidden="true" class="hidden size-8 fill-cambridge-50 hover:fill-cambridge-400"><use href="/assets/images/icons.svg#close"></use></svg>
+  </button> 
+
+  <div class="hidden sm:flex items-center justify-end w-full h-[50px] space-x-6">
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}" class="no-underline {% if page.url == item.link %}text-cambridge-100 border-b-4 border-cambridge-400 dark:border-cambridge-600 dark:text-cambridge-100{% else %} text-cambridge-100 dark:text-cambridge-300{% endif %} hover:text-cambridge-300 focus:outline-none focus-visible:ring focus:ring-blue">
+        {{ item.name }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="hidden sm:hidden w-full">
+  <nav class="flex flex-col items-end space-y-2 pb-3">
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}" class="block no-underline px-2 {% if page.url == item.link %}text-cambridge-100 dark:text-cambridge-100{% else %} text-cambridge-100 dark:text-cambridge-300{% endif %} hover:text-cambridge-300 focus:outline-none focus-visible:ring focus:ring-blue">
+        {{ item.name }}
+      </a>
+    {% endfor %}
+  </nav>
+</div>
+
+<script>
+  const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  menuButton.addEventListener('click', function() {
+    const buttonAriaLabel = menuButton.getAttribute('aria-label');
+    if (buttonAriaLabel == 'open menu') {
+      menuButton.setAttribute('aria-label', 'close menu');
+    } else {
+      menuButton.setAttribute('aria-label', 'open menu');
+    }
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    menuIcon.classList.toggle('inline-block');
+    closeIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('inline-block');
+  });
+</script>

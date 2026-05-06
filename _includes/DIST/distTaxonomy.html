@@ -1,0 +1,152 @@
+<!-- DIST taxonomy overview -->
+<header class="flex flex-col lg:flex-row justify-between leading-tight lg:items-center py-4 px-4 gap-2 lg:gap-0 bg-white dark:bg-black/30">
+  <h2 class="text-2xl lg:text-3xl font-medium">Digital Impacts Taxonomy</h2>
+  <div class="flex flex-col gap-1">
+    <div class="flex h-8 gap-2 items-center">
+      <div class="relative h-full w-24 flex border border-white rounded overflow-hidden">
+        <div class="cat-u size-full"></div>
+        <div class="cat-o size-full"></div>
+        <div class="cat-g size-full"></div>
+        <div class="cat-c size-full"></div>
+        <div class="cat-d size-full"></div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 text-white">Category</div>
+      </div>
+      <div class="h-8">DIST Category</div>
+    </div>
+    <div class="flex h-8 gap-2">
+      <div class="flex items-center justify-center w-24 h-full bg-charcoal-50 rounded border border-white font-medium text-sm dark:text-charcoal">1/2/3</div>
+      <div>GHG Protocol Scope</div>
+    </div>
+  </div>
+</header>
+
+<div class="flex flex-col lg:flex-row not-prose">
+
+  <!-- UPSTREAM -->
+  <div class="flex flex-col lg:w-1/4">
+    <div class="flex">
+      <div class="grow flex flex-col justify-center h-[4rem] px-2 py-2 cat-u">
+        <div class="relative">
+          <h3 class="pl-2 pb-0 mb-0 text-xl font-medium text-white border-none"><a class="text-inherit hover:text-inherit hover:opacity-80" href="/categories/upstream">Upstream Impacts</a></h3>
+          <div class="absolute right-0 top-8">
+            {% include DIST/categoryLabel.html label="CatU" %}
+          </div>
+        </div>
+      </div>
+      <!-- ARROW RIGHT: hidden on smaller screens -->
+      <div class="hidden lg:block w-0 h-0 z-10 cat-u-arrow-right"></div>
+    </div>
+    <div class="h-full text-sm lg:mr-[2rem] px-4 pt-4 pb-2 cat-u-body">
+      <p class="my-4">{{ site.data.taxonomy.CatU.description }}</p>
+
+      <h4 class="mt-8 mb-2 text-lg font-medium">Software</h4>
+      {% include DIST/categoryItem.html item="CatUSoftware" %}
+
+      <h4 class="mt-8 mb-2 text-lg font-medium">Hardware Manufacture, Transport and Installation</h4>
+      {% include DIST/categoryItem.html item="CatUEmployeeHardware" %}
+      {% include DIST/categoryItem.html item="CatUNetworkHardware" %}
+      {% include DIST/categoryItem.html item="CatUServerHardware" %}
+    </div>
+    <!-- ARROW DOWN: visible on smaller screens -->
+    <div class="w-full lg:hidden h-0 cat-u-arrow-down"></div>
+  </div>
+
+  <!-- OPERATIONAL -->
+  <div class="flex flex-col lg:w-2/4">
+    <div class="flex">
+      <div class="grow flex flex-col justify-center h-[4rem] lg:-ml-[2rem] px-2 py-2 cat-o">
+        <h3 class="lg:pl-[3rem] pb-0 mb-0 text-xl font-medium border-none"><a class="text-inherit hover:text-inherit hover:opacity-80" href="/categories/operational">Operational Impacts</a></h3>
+      </div>
+      <!-- ARROW RIGHT: hidden on smaller screens -->
+      <div class="hidden lg:block w-0 h-0 z-10 cat-o-arrow-right"></div>
+    </div>
+    <div class="h-full text-sm lg:-ml-[2rem] lg:mr-[2rem] px-4 pt-4 pb-2 cat-o-body">
+      <p class="my-4">{{ site.data.taxonomy.OperationalEmissions.description }}</p>
+
+      <div class="flex flex-col lg:flex-row gap-4 mt-6">
+
+        <!-- DIRECT (Category O) -->
+        <div class="relative px-2 py-2 border-2 border-white rounded-md">
+          <h4 class="mb-2 text-lg font-medium">Direct</h4>
+          <div class="absolute right-2 -top-2">
+            {% include DIST/categoryLabel.html label="CatO" %}
+          </div>
+          <p class="my-4">{{ site.data.taxonomy.CatO.description }}</p>
+
+          {% include DIST/categoryItem.html item="CatOEmployeeDevices" %}
+          {% include DIST/categoryItem.html item="CatONetworkDevices" %}
+          {% include DIST/categoryItem.html item="CatOServers" %}
+
+          <!-- DIRECT (Category G) -->
+          <div class="relative">
+            <hr class="border-white mb-2">
+            <div class="absolute right-2 -top-2">
+              {% include DIST/categoryLabel.html label="CatG" %}
+            </div>
+            {% include DIST/categoryItem.html item="CatGGenerators" %}
+          </div>
+        </div>
+
+        <!-- INDIRECT (Category C) -->
+        <div class="relative px-2 py-2 border-2 border-white rounded-md">
+          <h4 class="mb-2 text-lg font-medium">Indirect</h4>
+          <div class="absolute right-2 -top-2">
+            {% include DIST/categoryLabel.html label="CatC" %}
+          </div>
+          <p class="mb-2">{{ site.data.taxonomy.CatC.description }}</p>
+
+          {% include DIST/categoryItem.html item="CatCCloud" %}
+          {% include DIST/categoryItem.html item="CatCSaas" %}
+          {% include DIST/categoryItem.html item="CatCManaged" %}
+        </div>
+      </div>
+    </div>
+
+    <!-- ARROW DOWN: visible on smaller screens -->
+    <div class="w-full lg:hidden h-0 cat-o-arrow-down"></div>
+  </div>
+
+  <!-- DOWNSTREAM -->
+  <div class="flex flex-col lg:w-1/4">
+    <div class="flex">
+      <div class="grow flex flex-col justify-center h-[4rem] lg:-ml-[2rem] px-2 py-2 cat-d">
+        <div class="relative">
+          <h3 class="lg:pl-[3rem] pb-0 mb-0 text-xl font-medium border-none"><a class="text-inherit hover:text-inherit hover:opacity-80" href="/categories/downstream">Downstream Impacts</a></h3>
+          <div class="absolute right-0 top-8">
+            {% include DIST/categoryLabel.html label="CatD" %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-full text-sm lg:-ml-[2rem] px-4 pt-4 pb-2 cat-d-body">
+      <p class="my-4">{{ site.data.taxonomy.CatD.description }}</p>
+
+      <h4 class="mt-8 mb-2 text-lg font-medium">End Use (B2B, B2C)</h4>
+      {% include DIST/categoryItem.html item="CatDEndUserDevices" %}
+      {% include DIST/categoryItem.html item="CatDNetworkDataTransfer" %}
+    </div>
+  </div>
+
+</div>
+
+<div class="flex justify-center items-center px-4 py-4 mt-2 lg:mt-0 bg-black/25 dark:bg-black/25">
+  <div>
+    <h4 class="mb-2 text-lg font-medium">Out of Scope</h4>
+    <div class="flex items-center gap-2">
+      <div class="flex justify-center items-center size-12 bg-charcoal-600 dark:bg-charcoal-800">
+        <svg aria-hidden="true" class="w-8 h-8 fill-white"><use href="/assets/images/icons.svg#groups"></use></svg>
+      </div>
+      <div class="flex justify-center items-center size-12 bg-charcoal-600 dark:bg-charcoal-800">
+        <svg aria-hidden="true" class="w-8 h-8 fill-white"><use href="/assets/images/icons.svg#domain"></use></svg>
+      </div>
+      <div class="flex justify-center items-center size-12 bg-charcoal-600 dark:bg-charcoal-800">
+        <svg aria-hidden="true" class="w-8 h-8 fill-white"><use href="/assets/images/icons.svg#commute"></use></svg>
+      </div>
+      People, Buildings and Travel
+    </div>
+  </div>
+</div>
+
+<div class="px-2 py-4 bg-black/5 text-right">
+  {% include DIST/license.html %}
+</div>

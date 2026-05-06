@@ -1,0 +1,10 @@
+- name: Taxonomy
+  link: /taxonomy
+- name: Schema
+  link: /schema
+- name: News
+  link: /news
+- name: About
+  link: /about
+- name: Get involved
+  link: /get-involved

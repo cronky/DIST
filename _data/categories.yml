@@ -1,0 +1,6 @@
+- name: Upstream Impacts
+  link: /categories/upstream
+- name: Operational Impacts
+  link: /categories/operational
+- name: Downstream Impacts
+  link: /categories/downstream
