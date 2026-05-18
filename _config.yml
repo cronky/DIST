@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 email: support@greenweb.org
-description: The Digital Impacts Schema and Taxonomy
+description: Digital Impacts Schema and Taxonomy
 domain: dist.greenweb.org
 baseurl: ''
 url: https://dist.greenweb.org
