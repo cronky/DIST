@@ -1,7 +1,7 @@
 ---
-layout: category
 title: Downstream Emissions
 permalink: taxonomy/downstream
+layout: category
 ---
 
 # Downstream Emissions

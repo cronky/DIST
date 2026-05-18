@@ -1,7 +1,7 @@
 ---
-layout: category
 title: Operational Emissions
 permalink: taxonomy/operational
+layout: category
 ---
 
 # Operational Emissions

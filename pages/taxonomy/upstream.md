@@ -1,7 +1,7 @@
 ---
-layout: category
 title: Upstream Impacts
 permalink: taxonomy/upstream
+layout: category
 ---
 
 # Upstream Impacts

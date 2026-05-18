@@ -1,6 +1,6 @@
 ---
-layout: category
 title: Overview
-permalink: /taxonomy/overview
+permalink: "/taxonomy/overview"
+layout: category
 ---
 
