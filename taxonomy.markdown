@@ -5,5 +5,10 @@ layout: taxonomy
 ---
 
 <div class="py-8">
-  {% include DIST/distTaxonomy.html %}
+  {% include DIST/taxonomy-visual.html %}
+</div>
+
+<div class="py-8">
+  {% include DIST/taxonomy-overview.html %}
+
 </div>

@@ -21,16 +21,16 @@
 # - noLink: Provides an overide to prevent any navigation to a page. Renders the component in a <div> instead of an <a>.
 
 CatU:
-  description: Upstream impacts relating to the embodied impacts of hardware and the development of software.
+  description: The embodied impacts of hardware, the development of software, content & data.
 
 CatUSoftware:
   id: CatUSoftware
   category: cat-u
-  title: Off The Shelf including Open-Source Software
+  title: Off The Shelf including AI models
   icon: web
   selected: false
   description:
-  link: /categories/upstream#software
+  link: /taxonomy/upstream#software
   noLink: false
 
 CatUEmployeeHardware:
@@ -40,17 +40,17 @@ CatUEmployeeHardware:
   icon: devices
   selected: false
   description:
-  link: /categories/upstream#employee-hardware
+  link: /taxonomy/upstream#employee-hardware
   noLink: false
 
 CatUNetworkHardware:
   id: CatUNetworkHardware
   category: cat-u
-  title: Networking and Infrastructure Hardware
+  title: Networking Hardware
   icon: router
   selected: false
   description:
-  link: /categories/upstream#networking-hardware
+  link: /taxonomy/upstream#networking-hardware
   noLink: false
 
 CatUServerHardware:
@@ -60,14 +60,25 @@ CatUServerHardware:
   icon: storage
   selected: false
   description:
-  link: /categories/upstream#data-center-and-server-hardware
+  link: /taxonomy/upstream#servers-and-storage-hardware
   noLink: false
+
+CatUContentData:
+  id: CatUContentData
+  category: cat-u
+  title: Content and Data
+  icon: web
+  selected: false
+  description:
+  link: /taxonomy/upstream#content-and-data
+  noLink: false
+
 
 OperationalEmissions:
   description: Operational impacts are associated with the running of business IT functions and systems. Each operational function may have a hybrid of IT infrastructure across direct and/or indirect impacts.
 
 CatO:
-  description: Direct running costs that are attributed to the electricity powering servers, networks and devices.
+  description: Direct running costs that are attributed to directly operating servers, networks and devices.
 
 CatOServers:
   id: CatOServers
@@ -76,7 +87,7 @@ CatOServers:
   icon: storage
   selected: false
   description:
-  link: /categories/operational#servers-and-storage
+  link: /taxonomy/operational#servers-and-storage
   noLink: false
 
 CatONetworkDevices:
@@ -86,7 +97,7 @@ CatONetworkDevices:
   icon: router
   selected: false
   description:
-  link: /categories/operational#networking-devices
+  link: /taxonomy/operational#networking-devices
   noLink: false
 
 CatOEmployeeDevices:
@@ -96,7 +107,7 @@ CatOEmployeeDevices:
   icon: devices
   selected: false
   description:
-  link: /categories/operational#employee-devices
+  link: /taxonomy/operational#employee-devices
   noLink: false
 
 CatGGenerators:
@@ -106,7 +117,7 @@ CatGGenerators:
   icon: bolt
   selected: false
   description:
-  link: /categories/operational#generators
+  link: /taxonomy/operational#generators
   noLink: false
 
 CatC:
@@ -119,7 +130,7 @@ CatCCloud:
   icon: cloud
   selected: false
   description:
-  link: /categories/operational#cloud-services
+  link: /taxonomy/operational#cloud-services
   noLink: false
 
 CatCSaas:
@@ -129,7 +140,7 @@ CatCSaas:
   icon: web
   selected: false
   description:
-  link: /categories/operational#saas
+  link: /taxonomy/operational#saas
   noLink: false
 
 CatCManaged:
@@ -139,7 +150,7 @@ CatCManaged:
   icon: storage
   selected: false
   description:
-  link: /categories/operational#managed-services
+  link: /taxonomy/operational#managed-services
   noLink: false
 
 CatD:
@@ -152,7 +163,7 @@ CatDEndUserDevices:
   icon: devices
   selected: false
   description:
-  link: /categories/downstream#end-user-devices
+  link: /taxonomy/downstream#end-user-devices
   noLink: false
 
 CatDNetworkDataTransfer:
@@ -162,7 +173,7 @@ CatDNetworkDataTransfer:
   icon: cell-tower
   selected: false
   description:
-  link: /categories/downstream#network-data-transfer
+  link: /taxonomy/downstream#network-data-transfer
   noLink: false
 
 CatDInfrastructure:
@@ -172,5 +183,5 @@ CatDInfrastructure:
   icon: hub
   selected: false
   description:
-  link: /categories/downstream#infrastructure
+  link: /taxonomy/downstream#infrastructure
   noLink: false

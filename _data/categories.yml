@@ -1,6 +1,6 @@
 - name: Upstream Impacts
-  link: /categories/upstream
+  link: /taxonomy/upstream
 - name: Operational Impacts
-  link: /categories/operational
+  link: /taxonomy/operational
 - name: Downstream Impacts
-  link: /categories/downstream
+  link: /taxonomy/downstream
