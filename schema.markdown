@@ -8,7 +8,7 @@ Designed to be the definitive data format for sharing quantified tech impacts. C
 Key principle:
 > "An impact can only come into DIST's schema when it has a quantifiable metric against an agreed methodology."
 
-The DIST taxonomy will be broader and aspirational and educational. The schema is metrics-focused: structured reporting fields are only created for impacts that have an established, quantifiable way of being measured. This keeps the schema rigorous, consistent and defensible.
+The [DIST taxonomy](/taxonomy) will be broader and aspirational and educational. The schema is metrics-focused: structured reporting fields are only created for impacts that have an established, quantifiable way of being measured. This keeps the schema rigorous, consistent and defensible.
 
 ## More on what the schema is and what it isn't:
 
