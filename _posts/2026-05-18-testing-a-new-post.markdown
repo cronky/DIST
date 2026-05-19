@@ -1,6 +1,6 @@
 ---
 title: What DIST aims to achieve
-date: 2026-04-24 12:11:00 Z
+date: 2026-05-18 12:11:00 Z
 ---
 
 We live in a world of noise, lack of reliable information and misinformation surrounding the environmental and social impacts of technology. DIST aims to move us from narratives, doublespeak and greenwashing to a more quantified data and science based approach to reporting on the material and consequential matters of tech.
