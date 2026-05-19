@@ -8,7 +8,7 @@ Digital Impacts Schema & Taxonomy (DIST) is community driven and stewarded by Gr
 
 # Want to get involved?
 ## As an end user organisation
-DIST is primarily designed to help end user organisations understand the impact of their tech use so they can manage and migitate these impacts.
+DIST is intented to help end user organisations understand (and ultimately quantify) the impact of their tech use so they can manage and migitate these impacts.
 
 You can get started by mapping out your technology estate (in full or part), project, product or service using the categorisation the standard lays out. You can do this on your own using the materials on this website and GitHub or by engaging a partner to help you on this journey.
 
