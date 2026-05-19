@@ -1,5 +1,6 @@
 ---
 title: Digital Impacts Schema and Taxonomy
+date: 2026-05-19 13:57:00 Z
 layout: home
 ---
 
