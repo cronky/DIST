@@ -8,15 +8,15 @@ The definitive data format for sharing quantified tech impacts. Crucially with l
 Key principle:
 > "An impact can only come into DIST's schema when it has a quantifiable metric against an agreed methodology."
 
-The taxonomy can be broad and aspirational. The schema is metrics-focused: structured reporting fields are only created for impacts that have an established, quantifiable way of being measured. This keeps the schema rigorous and avoids forcing qualitative assessments into a quantitative structure.
+The DIST taxonomy will be broader and aspirational and educational. The schema is metrics-focused: structured reporting fields are only created for impacts that have an established, quantifiable way of being measured. This keeps the schema rigorous, consistent and defensible.
 
 ## More on what the schema is and what it isn't:
 
 ### This IS:
-* An open-source schema (data structure) and taxonomy (categorisation system) for workshopping and reporting digital/technology impacts
+* An open-source schema (data structure) for reporting digital/technology impacts
 * Aligned with life cycle assessment (LCA) principles and widely recognised upstream/operational/downstream categories where applicable
 * Designed to be discoverable via carbon.txt and machine-readable from day one
-*A foundation that other frameworks, tools, calculators and methodologies can plug into
+* A foundation that other frameworks, tools, calculators and methodologies can plug into
 
 ### This IS NOT:
 * A prescriptive methodology (the schema defines what to report, not how to calculate it; methodologies are referenced to provide vital context for the numbers)
