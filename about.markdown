@@ -6,7 +6,7 @@ layout: page
 
 Digital Impacts Schema and Taxonomy (DIST): driving understanding and facilitating data sharing on the impacts of digital. Intended to consistently classify and quantify the impacts of technology use. Initially focused on adverse impacts to raise awareness, quantify and focus on the material challenges and measure progress on mitigation. Whilst there will be a governed, science-based approach at the core of DIST, the approach is designed to be extensible and allow for community expansion and improvement.
 
-## Why?
+## Our vision and why this project exists
 Organisations can measure the carbon footprints of their technology with increasing confidence, but carbon is only one dimension of technology's impact on the world.
 Water consumption, electronic waste, biodiversity loss, supply chain conditions, and the societal and individual harms caused by technology systems are all material impacts. Today there is no consistent, open, structured way for organisations to report on or share data about these impacts alongside their carbon data.
 Our vision is an open-source schema and taxonomy that enables any organisation to understand and report on the full spectrum of their technology estate's impacts in a consistent, machine-readable, and comparable format. A shared language for digital impacts that is:
