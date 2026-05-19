@@ -13,7 +13,7 @@ DIST intends to go beyond carbon emissions to include a full range of material (
 
 DIST aligns with common approaches and standards, including (but not limited to) LCA (Life Cycle Assessment), GHG (Greenhouse Gas Protocol) and GSF (Green Software Foundation) SCI (Software Carbon Intensity).
 
-To get started, explore the taxonomy to give you a big picture view, check out the GitHub repo for more details on the schema or work with a DIST-aligned partner.
+To get started, explore the taxonomy to get a big picture view, check out the GitHub repo for more details on the schema or work with a DIST-aligned partner to help you implement this in practise.
 
 We are currently building a wish list of people we'd like to have help us build and govern this effort as it will take a village!
 
