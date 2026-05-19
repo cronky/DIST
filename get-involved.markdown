@@ -28,4 +28,4 @@ We will list here areas that we would welcome expert contribution on:
 
 - Health (Mental and Physical)
 - Materials (including raw materials extraction, recycling and eWaste disposal)
-- Land use / Biodiversity impacts
+- Land use / biodiversity impacts
