@@ -4,6 +4,8 @@ date: 2026-05-06 10:15:00 Z
 layout: taxonomy
 ---
 
+The taxonomy is categorisation system primarily for workshopping and broadly structuring digital/technology impacts. See [the schema for the data reporting](/schema) part of this project.
+
 <div class="py-8">
   {% include DIST/taxonomy-visual.html %}
 </div>
