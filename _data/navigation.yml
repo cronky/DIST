@@ -1,5 +1,7 @@
 - name: Taxonomy
   link: /taxonomy
+- name: Methodologies
+  link: /methodologies 
 - name: Schema
   link: /schema
 - name: News
