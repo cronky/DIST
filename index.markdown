@@ -23,9 +23,9 @@ layout: home
 <div class="full-width bg-charcoal-100">
     <div class="container prose mx-auto py-10">
         <h3 class="">Why DIST?</h3>
-        <p> Right now, lots of responsible organisations understand that the production and use of digital technologies has a significant and expanding environmental impact across many areas such as energy, water, biodiversity, land and other natural resources.</p>
+        <p> Right now, lots of responsible organisations understand that the production and use of digital technologies has a significant and expanding environmental impact.</p>
         <p>These organisations are stepping up and working hard to estimate, report on and ultimately tackle these impacts.</p>
-        <p class="font-bold">But because there is no consistent, open, structured way for organisations to report on or share the data they are producing, we're hamstrung by our inability to use this data to help us compare data from different organisations or aggragate it.</p>
+        <p class="font-bold">But because there is no consistent, open, structured way for organisations to report on or share the data they are producing, we're hamstrung by our inability to use this data for comparing different organisations or aggragating it.</p>
         <p>DIST sets out to work collaboratively with others across the field to address this.</p>
     </div>
 </div>
