@@ -110,6 +110,7 @@
     html {
         @apply text-neutral-900;
         @apply font-normal;
+        @apply leading-6;
     }
     *,
     ::before,
@@ -158,6 +159,15 @@
 }
 
 @layer components {
+
+    .full-width {
+      @apply relative;
+      @apply left-[50%];
+      @apply w-[calc(100vw-12px)];
+      @apply ml-[calc(-50vw+6px)];
+      @apply mr-[calc(-50vw+6px)];
+    }
+
     .prose {
         --tw-prose-body: var(--color-neutral-900);
         --tw-prose-headings: var(--color-neutral-900);
