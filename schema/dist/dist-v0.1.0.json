@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dist.greenweb.org/schemas/dist/v0.1.0.json",
+  "title": "Digital Impacts Schema and Taxonomy (DIST) v0.1.0",
+  "description": "A single-file schema for reporting the impacts of a technology estate across multiple dimensions. Each impact is recorded as an individual entry in the impacts array, allowing reporting at any level of granularity from a single top-level dimension figure down to a specific technology category.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["0.1.0"]
+    },
+    "organisation": {
+      "type": "object",
+      "description": "The reporting organisation.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the reporting organisation."
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description of the organisation and its technology estate."
+        },
+        "country": {
+          "type": "string",
+          "description": "Country of registration."
+        },
+        "sector": {
+          "type": "string",
+          "description": "Primary sector or industry."
+        },
+        "size": {
+          "type": "string",
+          "enum": ["1-10", "11-50", "51-250", "251-1000", "1001-5000", "5001-10000", "10001+"],
+          "description": "Employee count range."
+        }
+      },
+      "required": ["name"]
+    },
+    "report": {
+      "type": "object",
+      "description": "A single impacts report covering a defined period.",
+      "properties": {
+        "reporting_unit": {
+          "type": "string",
+          "description": "Organisational unit this report covers (e.g. 'Global Operations', 'Cloud Platform', 'Product X')."
+        },
+        "reporting_period": {
+          "type": "object",
+          "properties": {
+            "from": { "type": "string", "format": "date" },
+            "to": { "type": "string", "format": "date" }
+          },
+          "required": ["from", "to"]
+        },
+        "reporting_scope": {
+          "type": "string",
+          "enum": ["own_operations", "service_provided", "both"],
+          "description": "Whether this report covers the organisation's own operations, the impacts of services provided to customers, or both. Relevant for vendor/supplier transparency."
+        },
+        "verification": {
+          "type": "string",
+          "enum": ["self_reported", "peer_reviewed", "independently_verified"],
+          "description": "Level of verification applied to this report."
+        },
+        "verifier": {
+          "type": "object",
+          "description": "Verifying organisation. Required when verification is 'independently_verified'.",
+          "properties": {
+            "name": { "type": "string" },
+            "url": { "type": "string", "format": "uri" }
+          },
+          "required": ["name"]
+        },
+        "disclosures": {
+          "type": "array",
+          "description": "Links to supporting documents.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": { "type": "string", "format": "uri" },
+              "type": { "type": "string", "enum": ["report", "methodology", "data", "other"] },
+              "description": { "type": "string" }
+            },
+            "required": ["url"]
+          }
+        },
+        "impacts": {
+          "type": "array",
+          "description": "Array of individual impact measurements. Each entry reports a single quantifiable impact. Report at whatever granularity you have data for.",
+          "items": {
+            "$ref": "#/$defs/impact"
+          }
+        }
+      },
+      "required": ["reporting_period", "verification", "impacts"]
+    }
+  },
+  "required": ["schema_version", "organisation", "report"],
+  "$defs": {
+    "impact": {
+      "type": "object",
+      "description": "A single impact measurement.",
+      "properties": {
+        "dimension": {
+          "type": "string",
+          "enum": ["carbon", "energy", "water", "materials", "land_use", "health"],
+          "description": "The DIST taxonomy dimension this impact belongs to."
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "upstream",
+            "operational_direct",
+            "operational_indirect",
+            "downstream",
+            "total"
+          ],
+          "description": "Lifecycle category. Optional: omit to report at dimension level only. Use 'total' for an aggregate figure across all categories."
+        },
+        "subcategory": {
+          "type": "string",
+          "description": "Specific technology category within the lifecycle stage. Uses TCS-compatible identifiers where applicable (e.g. 'employee_hardware', 'cloud_services', 'servers', 'end_user_devices'). Free text to allow extension.",
+          "examples": [
+            "software",
+            "employee_hardware",
+            "network_hardware",
+            "server_hardware",
+            "foundation_models",
+            "employee_devices",
+            "networking",
+            "servers",
+            "generators",
+            "offsite_employee_hardware",
+            "cloud_services",
+            "saas",
+            "managed_services",
+            "end_user_devices",
+            "network_data_transfer"
+          ]
+        },
+        "value": {
+          "type": "number",
+          "description": "The measured or estimated impact value."
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of measurement. Should be spelled out clearly (e.g. 'kgCO2e', 'kWh', 'litres', 'm3', 'kg', 'hectares', 'years'). Defined by the methodology but stated here for transparency.",
+          "examples": ["kgCO2e", "kWh", "litres", "m3", "kg", "hectares", "years"]
+        },
+        "methodology_name": {
+          "type": "string",
+          "description": "Human-readable name of the methodology used to calculate this value (e.g. 'Cloud Carbon Footprinting tool', 'Manufacturer LCA data', 'WRI Aqueduct water stress assessment')."
+        },
+        "methodology_id": {
+          "type": "string",
+          "description": "Machine-readable methodology identifier. Use a DIST published methodology ID where available (e.g. 'dist:carbon:ccf', 'dist:carbon:ghgp-ict'). Can reference external methodology registries. Helps identify whether a recognised methodology was used.",
+          "examples": [
+            "dist:carbon:ghgp-ict",
+            "dist:carbon:ccf",
+            "dist:energy:direct-metering",
+            "dist:water:wue-estimate"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Confidence in the reported value as a percentage (0-100). 90-100: primary data, detailed calculation. 50-89: reasonable proxies and estimates. Below 50: rough order-of-magnitude."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Supporting notes: assumptions, scope boundaries, limitations, or anything a reader needs to interpret this value correctly."
+        },
+        "data_sources": {
+          "type": "array",
+          "description": "References to data sources used (URLs, document names, database identifiers).",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["dimension", "value", "unit"]
+    }
+  }
+}
