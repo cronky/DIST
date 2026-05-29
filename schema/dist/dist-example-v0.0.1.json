@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.0.1",
   "organisation": {
     "name": "Example SaaS Co",
     "description": "Mid-sized SaaS company, 200 employees, hybrid workforce, public cloud infrastructure.",
