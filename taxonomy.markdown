@@ -9,6 +9,7 @@ The taxonomy part of Digital Impacts Schema and Taxonomy (DIST) is a standardise
 </div>
 
 <div class="my-6">
+  {% include DIST/taxonomy-overview.html %}
 
 <h2>Impact dimensions</h2>
 
@@ -29,7 +30,7 @@ The taxonomy part of Digital Impacts Schema and Taxonomy (DIST) is a standardise
     A tailored view of the taxonomy to support categorisation with the carbon impact dimension.
   </div>
   <div class="mb-8">
-  {% include DIST/taxonomy-overview.html %}
+  {% include DIST/taxonomy-visual.html dimension="carbon" %}
   </div>
   {% endtab %}
 

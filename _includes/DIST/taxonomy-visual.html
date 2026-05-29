@@ -1,6 +1,10 @@
+{% assign dimension = include.dimension | "default" %}
+
 <!-- DIST taxonomy visual overview -->
 <header class="flex flex-col lg:flex-row justify-between leading-tight lg:items-center py-4 px-4 gap-2 lg:gap-0 bg-white dark:bg-black/30">
-  <h2 class="text-2xl lg:text-3xl font-medium">Digital Impacts Taxonomy</h2>
+  
+  {% include DIST/taxonomy-title.html dimension=dimension %}
+  
   <div class="flex flex-col gap-1">
     <div class="flex h-8 gap-2 items-center">
       <div class="relative h-full w-24 flex border border-white rounded overflow-hidden">
@@ -13,10 +17,13 @@
       </div>
       <div class="h-8 flex items-center"><span>DIST Category</span></div>
     </div>
-    <div class="flex h-8 gap-2">
-      <div class="flex items-center justify-center w-24 h-full bg-charcoal-100 rounded border border-white font-medium text-sm dark:text-charcoal">1/2/3</div>
-      <div class="flex items-center"><span>GHG Protocol Scope</span></div>
-    </div>
+    
+    {% if dimension == "carbon" %}  
+      <div class="flex h-8 gap-2">
+        <div class="flex items-center justify-center w-24 h-full bg-charcoal-100 rounded border border-white font-medium text-sm dark:text-charcoal">1/2/3</div>
+        <div class="flex items-center"><span>GHG Protocol Scope</span></div>
+      </div>
+    {% endif %}
   </div>
 </header>
 
@@ -29,7 +36,7 @@
         <div class="relative">
           <h3 class="pl-2 pb-0 mb-0 text-xl font-medium text-white border-none"><a class="text-inherit hover:text-inherit hover:opacity-80" href="/taxonomy/upstream">Upstream Impacts</a></h3>
           <div class="absolute right-0 top-8">
-            {% include DIST/categoryLabel.html label="CatU" %}
+            {% include DIST/categoryLabel.html label="CatU" dimension=dimension %}
           </div>
         </div>
       </div>
@@ -40,7 +47,7 @@
       <p class="my-4">{{ site.data.taxonomy.CatU.description }}</p>
 
       <h4 class="mt-8 mb-2 text-lg font-medium">Software</h4>
-      {% include DIST/categoryItem.html item="CatUSoftware" %}
+      {% include DIST/categoryItem.html item="CatUSoftware" dimension=dimension %}
 
       <h4 class="mt-8 mb-2 text-lg font-medium">Hardware Manufacture, Transport and Installation</h4>
       {% include DIST/categoryItem.html item="CatUEmployeeHardware" %}
@@ -75,19 +82,19 @@
         <div class="relative px-2 py-2 border-2 border-white rounded-md">
           <h4 class="mb-2 text-lg font-medium">Direct</h4>
           <div class="absolute right-2 -top-2">
-            {% include DIST/categoryLabel.html label="CatO" %}
+            {% include DIST/categoryLabel.html label="CatO" dimension=dimension %}
           </div>
           <p class="my-4">{{ site.data.taxonomy.CatO.description }}</p>
 
           {% include DIST/categoryItem.html item="CatOEmployeeDevices" %}
-          {% include DIST/categoryItem.html item="CatONetworkDevices" %}
+          {% include DIST/categoryItem.html item="CatONetworkDevices"%}
           {% include DIST/categoryItem.html item="CatOServers" %}
 
           <!-- DIRECT (Category G) -->
           <div class="relative">
             <hr class="border-white mb-2">
             <div class="absolute right-2 -top-2">
-              {% include DIST/categoryLabel.html label="CatG" %}
+              {% include DIST/categoryLabel.html label="CatG" dimension=dimension %}
             </div>
             {% include DIST/categoryItem.html item="CatGGenerators" %}
           </div>
@@ -97,7 +104,7 @@
         <div class="relative px-2 py-2 border-2 border-white rounded-md">
           <h4 class="mb-2 text-lg font-medium">Indirect</h4>
           <div class="absolute right-2 -top-2">
-            {% include DIST/categoryLabel.html label="CatC" %}
+            {% include DIST/categoryLabel.html label="CatC" dimension=dimension %}
           </div>
           <p class="mb-2">{{ site.data.taxonomy.CatC.description }}</p>
 
@@ -119,7 +126,7 @@
         <div class="relative">
           <h3 class="lg:pl-[3rem] pb-0 mb-0 text-xl font-medium border-none"><a class="text-inherit hover:text-inherit hover:opacity-80" href="/taxonomy/downstream">Downstream Impacts</a></h3>
           <div class="absolute right-0 top-8">
-            {% include DIST/categoryLabel.html label="CatD" %}
+            {% include DIST/categoryLabel.html label="CatD" dimension=dimension %}
           </div>
         </div>
       </div>

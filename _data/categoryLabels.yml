@@ -4,29 +4,41 @@
 # The Category Items are mapped and accessible using thier item name.
 # - category: is actually a css class that is passed through to set the colour of the item (background to the icon).
 # - title: used as the label text for the item.
-# - GHGScope: is the GHG protocol scope that the category aligns to.
+# - impactDimensions: a nested structure to hold customisations relevant to each impact dimension.
+#   - carbon: customisations relevant to the carbon impact dimension.
+#     - GHGScope: expected to be a number, what scope of the GHG Protocol does a category map to.
 
 CatU:
   category: cat-u
   title: Category U
-  GHGScope: 3
+  impactDimensions:
+    carbon:
+      GHGScope: 3
 
 CatO:
   category: cat-o
   title: Category O
-  GHGScope: 2
+  impactDimensions:
+    carbon:
+      GHGScope: 2 
 
 CatG:
   category: cat-g
   title: Category G
-  GHGScope: 1
+  impactDimensions:
+    carbon:
+      GHGScope: 1  
 
 CatC:
   category: cat-c
   title: Category C
-  GHGScope: 3
+  impactDimensions:
+    carbon:
+      GHGScope: 3
 
 CatD:
   category: cat-d
   title: Category D
-  GHGScope: 3
+  impactDimensions:
+    carbon:
+      GHGScope: 3
