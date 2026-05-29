@@ -196,6 +196,11 @@
       }
     }
 
+    .page-heading {
+        @apply mt-8;
+        @apply mb-4;
+    }
+
     .tab {
         display: flex;
         flex-wrap: wrap;
@@ -214,19 +219,22 @@
     .tab > * > a {
         display: block;
         text-align: center;
-        padding: 9px 20px;
-        color: #999;
-        border-bottom: 2px solid transparent;
-        border-bottom-color: transparent;
-        font-size: 12px;
+        @apply px-6;
+        @apply py-3;
+        @apply text-charcoal-500;
+        border: 2px solid transparent;
+        border-color: transparent;
+        @apply rounded-2xl;
+        @apply text-med;
         text-transform: uppercase;
         transition: color .1s ease-in-out;
         line-height: 20px;
     }
 
     .tab > .active > a {
-        color:#222;
-        border-color: #1e87f0;
+        @apply text-black;
+        @apply border-black;
+        @apply bg-charcoal-50;
     }
 
     .tab > li > a {
