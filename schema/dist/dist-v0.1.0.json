@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dist.greenweb.org/schemas/dist/v0.1.0.json",
-  "title": "Digital Impacts Schema and Taxonomy (DIST) v0.1.0",
+  "$id": "https://dist.greenweb.org/schemas/dist/v0.0.1.json",
+  "title": "Digital Impacts Schema and Taxonomy (DIST) v0.0.1",
   "description": "A single-file schema for reporting the impacts of a technology estate across multiple dimensions. Each impact is recorded as an individual entry in the impacts array, allowing reporting at any level of granularity from a single top-level dimension figure down to a specific technology category.",
   "type": "object",
   "properties": {
