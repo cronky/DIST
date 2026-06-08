@@ -17,6 +17,7 @@ theme: minima
 plugins:
 - jekyll-feed
 - jekyll-tailwind
+- jekyll-tabs
 tailwind:
   input: assets/app.css
   minify: true

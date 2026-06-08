@@ -10,7 +10,7 @@ layout: home
 
 <div class="grid gap-x-10 gap-y-6 sm:grid-cols-3 sm:grid-rows-[repeat(3,minmax(0,auto))] sm:grid-flow-col sm:auto-rows-auto mt-10 mb-20">
     <div class="..."><h2 class="mb-0 text-2xl border-t-0">Taxonomy</h2></div>
-    <div class=""><p>Standardised categorisation system for structuring impacts and ensuring nothing important is missed.</p></div>
+    <div class=""><p>Standardised categorisation system across multiple impact dimensions for structuring impacts and ensuring nothing important is missed.</p></div>
     <div class=""><a href="/taxonomy" class="font-bold">Taxonomy →</a></div>
     <div class=""><h2 class="mb-0 text-2xl border-t-0">Methodologies</h2></div>
     <div class=""><p>Curated list of measurement methodologies to support data production for all categories of the taxonomy.</p></div>

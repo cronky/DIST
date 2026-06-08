@@ -179,6 +179,8 @@ GEM
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-swiss (1.0.0)
+    jekyll-tabs (1.2.1)
+      jekyll (>= 3.0, < 5.0)
     jekyll-tailwind (2.1)
       jekyll (>= 3.0, < 5.0)
       tailwindcss-ruby
@@ -338,6 +340,7 @@ DEPENDENCIES
   github-pages (~> 232)
   http_parser.rb (~> 0.6.0)
   jekyll-feed (~> 0.12)
+  jekyll-tabs
   jekyll-tailwind
   tzinfo (>= 1, < 3)
   tzinfo-data
